@@ -103,6 +103,7 @@ body {
 .sess-type { font-size: 10px; font-weight: 700; letter-spacing: 0.07em; text-transform: uppercase; color: var(--ink-4); margin-bottom: 2px; }
 .sess-title { font-size: 14px; font-weight: 500; color: var(--ink); line-height: 1.4; }
 .sess-sub { font-size: 12px; color: var(--ink-4); line-height: 1.5; margin-top: 2px; }
+.sess-dur { flex-shrink: 0; font-size: 11px; font-weight: 600; color: var(--ink-4); background: var(--ink-7); border-radius: 6px; padding: 3px 8px; align-self: flex-start; margin-top: 2px; white-space: nowrap; min-width: 44px; text-align: center; }
 .anchor { margin: 0 16px 14px; background: var(--ink-7); border-radius: var(--r-sm); padding: 9px 12px; display: flex; align-items: center; gap: 8px; font-size: 12px; font-weight: 500; color: var(--ink-3); }
 .anchor-dot { width: 6px; height: 6px; border-radius: 50%; background: #22C55E; flex-shrink: 0; }
 .rules-hero { margin-bottom: 24px; }
@@ -211,176 +212,176 @@ const RULES=[
 
 const DATA=[
   // MINGGU 1
-  {w:'w1',name:'Kamis',dayN:'25',month:'Jun',dv:'2026-06-25',dim:false,pills:['Logika'],s:[
+  {w:'w1',name:'Kamis',dayN:'25',month:'Jun',dv:'2026-06-25',dim:false,pauliDur:'10 mnt',pills:['Logika'],s:[
     {tp:'p',title:'Pauli 10 menit',sub:'Mulai hari ini, tiap hari tanpa kecuali. Tulis skor: berapa baris selesai.'},
     {tp:'k',title:'Logika formal — pertidaksamaan variabel',sub:'Buku hlm 164–172 · Pahami 3 contoh, jangan lanjut sebelum paham polanya'},
     {tp:'s',title:'8 soal logika formal',sub:'Catat mana yang salah dan mengapa — bukan sekadar lihat jawaban'}]},
-  {w:'w1',name:'Jumat',dayN:'26',month:'Jun',dv:'2026-06-26',dim:false,pills:['Logika'],s:[
+  {w:'w1',name:'Jumat',dayN:'26',month:'Jun',dv:'2026-06-26',dim:false,pauliDur:'10 mnt',pills:['Logika'],s:[
     {tp:'p',title:'Pauli 10 menit',sub:''},
     {tp:'k',title:'Logika analitik — wacana premis & kesimpulan',sub:'Buku hlm 163 · Fokus: Benar / Salah / Tidak Diketahui'},
     {tp:'s',title:'8 soal logika analitik',sub:'Bandingkan cara berpikirmu dengan pembahasan buku'}]},
-  {w:'w1',name:'Sabtu',dayN:'27',month:'Jun',dv:'2026-06-27',dim:true,pills:['Libur'],s:[
+  {w:'w1',name:'Sabtu',dayN:'27',pauliDur:'10 mnt',month:'Jun',dv:'2026-06-27',dim:true,pills:['Libur'],s:[
     {tp:'p',title:'Pauli 10 menit — anchor wajib',sub:''},
     {tp:'rest',title:'Istirahat penuh. Gym, aktivitas lain.',sub:'Otak butuh konsolidasi — ini bagian dari proses belajar'}]},
-  {w:'w1',name:'Minggu',dayN:'28',month:'Jun',dv:'2026-06-28',dim:true,pills:['Libur'],s:[
+  {w:'w1',name:'Minggu',dayN:'28',pauliDur:'10 mnt',month:'Jun',dv:'2026-06-28',dim:true,pills:['Libur'],s:[
     {tp:'p',title:'Pauli 10 menit — anchor wajib',sub:''},
     {tp:'rest',title:'Istirahat penuh.',sub:''}]},
 
   // MINGGU 2
-  {w:'w2',name:'Senin',dayN:'29',month:'Jun',dv:'2026-06-29',dim:false,pills:['Deret','Review'],s:[
+  {w:'w2',name:'Senin',dayN:'29',pauliDur:'15 mnt',month:'Jun',dv:'2026-06-29',dim:false,pills:['Deret','Review'],s:[
     {tp:'p',title:'Pauli 15 menit',sub:''},
     {tp:'k',title:'Deret angka — pola tunggal (+, ×, −, ÷)',sub:'Buku hlm 118–123 · Identifikasi 4 jenis pola dasar'},
     {tp:'s',title:'10 soal deret pola tunggal',sub:'Timer: max 30 detik per soal'},
     {tp:'r',title:'Ulang 3 soal logika yang salah minggu lalu',sub:'Tujuan: mengerti mengapa salah, bukan hafal jawabannya'}]},
-  {w:'w2',name:'Selasa',dayN:'30',month:'Jun',dv:'2026-06-30',dim:false,pills:['Logika','Deret'],s:[
+  {w:'w2',name:'Selasa',dayN:'30',pauliDur:'15 mnt',month:'Jun',dv:'2026-06-30',dim:false,pills:['Logika','Deret'],s:[
     {tp:'p',title:'Pauli 15 menit',sub:''},
     {tp:'r',title:'Logika formal — 8 soal baru (paparan ke-2)',sub:'Tanpa lihat buku dulu'},
     {tp:'k',title:'Deret angka — pola ganda & selang-seling',sub:'Buku hlm 118–123 lanjut · Ini yang paling sering bikin bingung'}]},
-  {w:'w2',name:'Rabu',dayN:'1',month:'Jul',dv:'2026-07-01',dim:false,pills:['Logika','Deret'],s:[
+  {w:'w2',name:'Rabu',dayN:'1',month:'Jul',pauliDur:'15 mnt',dv:'2026-07-01',dim:false,pills:['Logika','Deret'],s:[
     {tp:'p',title:'Pauli 15 menit',sub:''},
     {tp:'r',title:'Logika analitik — 8 soal baru (paparan ke-2)',sub:'Ukur apakah ada peningkatan dari Minggu 1'},
     {tp:'s',title:'8 soal deret ganda & selang-seling',sub:'Catat pola mana yang masih sering salah'}]},
-  {w:'w2',name:'Kamis',dayN:'2',month:'Jul',dv:'2026-07-02',dim:false,pills:['Aritmatika'],s:[
+  {w:'w2',name:'Kamis',dayN:'2',pauliDur:'15 mnt',month:'Jul',dv:'2026-07-02',dim:false,pills:['Aritmatika'],s:[
     {tp:'p',title:'Pauli 15 menit',sub:''},
     {tp:'k',title:'Aritmatika dasar — operasi cepat & pecahan',sub:'Buku hlm 109–117 · Fokus kecepatan, bukan hanya akurasi'},
     {tp:'s',title:'12 soal aritmatika bertimed',sub:'Timer: max 20 detik per soal'}]},
-  {w:'w2',name:'Jumat',dayN:'3',month:'Jul',dv:'2026-07-03',dim:false,pills:['Figural'],s:[
+  {w:'w2',name:'Jumat',dayN:'3',pauliDur:'15 mnt',month:'Jul',dv:'2026-07-03',dim:false,pills:['Figural'],s:[
     {tp:'p',title:'Pauli 15 menit',sub:''},
     {tp:'k',title:'Pola gambar — irama gambar dasar',sub:'Buku hlm 173–180 · 4 jenis: rotasi, pencerminan, penambahan, penghilangan'},
     {tp:'s',title:'10 soal pola gambar',sub:''}]},
-  {w:'w2',name:'Sabtu',dayN:'4',month:'Jul',dv:'2026-07-04',dim:true,pills:['Libur'],s:[
+  {w:'w2',name:'Sabtu',dayN:'4',pauliDur:'10 mnt',month:'Jul',dv:'2026-07-04',dim:true,pills:['Libur'],s:[
     {tp:'p',title:'Pauli 10 menit — anchor wajib',sub:''},
     {tp:'rest',title:'Istirahat penuh.',sub:''}]},
-  {w:'w2',name:'Minggu',dayN:'5',month:'Jul',dv:'2026-07-05',dim:true,pills:['Libur'],s:[
+  {w:'w2',name:'Minggu',dayN:'5',pauliDur:'10 mnt',month:'Jul',dv:'2026-07-05',dim:true,pills:['Libur'],s:[
     {tp:'p',title:'Pauli 10 menit — anchor wajib',sub:''},
     {tp:'rest',title:'Istirahat penuh.',sub:''}]},
 
   // MINGGU 3
-  {w:'w3',name:'Senin',dayN:'6',month:'Jul',dv:'2026-07-06',dim:false,pills:['Buffer'],s:[
+  {w:'w3',name:'Senin',dayN:'6',pauliDur:'20 mnt',month:'Jul',dv:'2026-07-06',dim:false,pills:['Buffer'],s:[
     {tp:'p',title:'Pauli 20 menit',sub:''},
     {tp:'r',title:'Buffer — catch-up materi Minggu 1–2',sub:'Pilih materi yang paling belum paham, kerjakan 10 soal. Kalau semua oke — istirahat penuh.'}]},
-  {w:'w3',name:'Selasa',dayN:'7',month:'Jul',dv:'2026-07-07',dim:false,pills:['Kubus','Logika'],s:[
+  {w:'w3',name:'Selasa',dayN:'7',pauliDur:'20 mnt',month:'Jul',dv:'2026-07-07',dim:false,pills:['Kubus','Logika'],s:[
     {tp:'p',title:'Pauli 20 menit',sub:''},
     {tp:'k',title:'Kubus 3D & bangun tiga dimensi',sub:'Buku hlm 230–240 · Hitung kubus bertumpuk — paling tricky'},
     {tp:'r',title:'Logika campuran timed — 6 formal + 6 analitik',sub:'Paparan ke-3 logika · max 1 menit per soal'}]},
-  {w:'w3',name:'Rabu',dayN:'8',month:'Jul',dv:'2026-07-08',dim:false,pills:['Kubus','Figural'],s:[
+  {w:'w3',name:'Rabu',dayN:'8',pauliDur:'20 mnt',month:'Jul',dv:'2026-07-08',dim:false,pills:['Kubus','Figural'],s:[
     {tp:'p',title:'Pauli 20 menit',sub:''},
     {tp:'s',title:'10 soal kubus & 3D',sub:'Visualisasikan dulu sebelum menjawab'},
     {tp:'k',title:'Pencerminan & jaring-jaring gambar',sub:'Buku hlm 181–205 · Polanya mirip, pelajari sekaligus'}]},
-  {w:'w3',name:'Kamis',dayN:'9',month:'Jul',dv:'2026-07-09',dim:false,pills:['Figural','Deret'],s:[
+  {w:'w3',name:'Kamis',dayN:'9',pauliDur:'20 mnt',month:'Jul',dv:'2026-07-09',dim:false,pills:['Figural','Deret'],s:[
     {tp:'p',title:'Pauli 20 menit',sub:''},
     {tp:'k',title:'Gambar spasial & penggabungan gambar',sub:'Buku hlm 206–214 & 241–252'},
     {tp:'r',title:'Deret angka — 10 soal campuran timed (paparan ke-3)',sub:'Max 25 detik per soal'}]},
-  {w:'w3',name:'Jumat',dayN:'10',month:'Jul',dv:'2026-07-10',dim:false,pills:['Numerik'],s:[
+  {w:'w3',name:'Jumat',dayN:'10',pauliDur:'20 mnt',month:'Jul',dv:'2026-07-10',dim:false,pills:['Numerik'],s:[
     {tp:'p',title:'Pauli 20 menit',sub:''},
     {tp:'k',title:'Tes cerita matematika & matematika berpola',sub:'Buku hlm 124–149 · Fokus identifikasi kata kunci'},
     {tp:'r',title:'Aritmatika — 10 soal baru timed (paparan ke-2)',sub:''}]},
-  {w:'w3',name:'Sabtu',dayN:'11',month:'Jul',dv:'2026-07-11',dim:true,pills:['Libur'],s:[
+  {w:'w3',name:'Sabtu',dayN:'11',pauliDur:'10 mnt',month:'Jul',dv:'2026-07-11',dim:true,pills:['Libur'],s:[
     {tp:'p',title:'Pauli 10 menit — anchor wajib',sub:''},
     {tp:'rest',title:'Istirahat penuh.',sub:''}]},
-  {w:'w3',name:'Minggu',dayN:'12',month:'Jul',dv:'2026-07-12',dim:true,pills:['Libur'],s:[
+  {w:'w3',name:'Minggu',dayN:'12',pauliDur:'10 mnt',month:'Jul',dv:'2026-07-12',dim:true,pills:['Libur'],s:[
     {tp:'p',title:'Pauli 10 menit — anchor wajib',sub:''},
     {tp:'rest',title:'Istirahat penuh.',sub:''}]},
-  {w:'w3',name:'Senin',dayN:'13',month:'Jul',dv:'2026-07-13',dim:false,pills:['Verbal','Gambar'],s:[
+  {w:'w3',name:'Senin',dayN:'13',pauliDur:'20 mnt',month:'Jul',dv:'2026-07-13',dim:false,pills:['Verbal','Gambar'],s:[
     {tp:'p',title:'Pauli 20 menit',sub:''},
     {tp:'k',title:'Verbal: sinonim, antonim, analogi kata',sub:'Buku hlm 10–42 · Materi lebih mudah — sesi ringan'},
     {tp:'k',title:'Diagram Venn & himpunan + tes ketelitian',sub:'Buku hlm 253–262 & hlm 43–46'},
     {tp:'t',title:'Gambar pohon (DAT) & gambar orang (DAM)',sub:'Buku hlm 47–55 · Gambar 2x pohon, 2x orang'}]},
 
   // MINGGU 4
-  {w:'w4',name:'Selasa',dayN:'14',month:'Jul',dv:'2026-07-14',dim:false,pills:['Buffer'],s:[
+  {w:'w4',name:'Selasa',dayN:'14',pauliDur:'20 mnt',month:'Jul',dv:'2026-07-14',dim:false,pills:['Buffer'],s:[
     {tp:'p',title:'Pauli 20 menit',sub:''},
     {tp:'r',title:'Buffer — catch-up Minggu 3',sub:'Fokus soal yang paling banyak salah. Atau ulang figural tambahan dengan soal baru.'}]},
-  {w:'w4',name:'Rabu',dayN:'15',month:'Jul',dv:'2026-07-15',dim:false,pills:['Simulasi 1'],s:[
+  {w:'w4',name:'Rabu',dayN:'15',pauliDur:'25 mnt',month:'Jul',dv:'2026-07-15',dim:false,pills:['Simulasi 1'],s:[
     {tp:'p',title:'Pauli 25 menit',sub:''},
     {tp:'sim',title:'Simulasi 1 — verbal timed',sub:'Sinonim + antonim + analogi · 17 soal, 4 menit · Catat soal figural & verbal yang salah — ini daftar prioritas Minggu 5'},
     {tp:'sim',title:'Simulasi 1 — numerik timed',sub:'Deret + aritmatika · 15 soal, 5 menit · Catat tipe soal numerik yang masih sering salah'},
     {tp:'r',title:'Catat tipe soal yang paling banyak salah',sub:'Ini prioritas remedial Jumat'}]},
-  {w:'w4',name:'Kamis',dayN:'16',month:'Jul',dv:'2026-07-16',dim:false,pills:['Simulasi 2'],s:[
+  {w:'w4',name:'Kamis',dayN:'16',pauliDur:'25 mnt',month:'Jul',dv:'2026-07-16',dim:false,pills:['Simulasi 2'],s:[
     {tp:'p',title:'Pauli 25 menit',sub:''},
     {tp:'sim',title:'Simulasi 2 — logika timed via TryOut.id',sub:'Formal + analitik · 16 soal, 6 menit · Catat soal logika yang masih salah — bandingkan dengan Simulasi 1'},
     {tp:'sim',title:'Simulasi 2 — figural timed',sub:'Pola gambar + kubus · 15 soal, 5 menit · Catat soal figural yang salah — ini yang jadi fokus utama Minggu 5'},
     {tp:'r',title:'Bandingkan dengan simulasi kemarin',sub:'Ada peningkatan atau tipe soal yang konsisten salah?'}]},
-  {w:'w4',name:'Jumat',dayN:'17',month:'Jul',dv:'2026-07-17',dim:false,pills:['Remedial'],s:[
+  {w:'w4',name:'Jumat',dayN:'17',pauliDur:'25 mnt',month:'Jul',dv:'2026-07-17',dim:false,pills:['Remedial'],s:[
     {tp:'p',title:'Pauli 25 menit',sub:''},
     {tp:'r',title:'Remedial — fokus tipe soal paling banyak salah',sub:'Kerjakan minimal 15 soal tambahan via TryOut.id'}]},
-  {w:'w4',name:'Sabtu',dayN:'18',month:'Jul',dv:'2026-07-18',dim:true,pills:['Libur'],s:[
+  {w:'w4',name:'Sabtu',dayN:'18',pauliDur:'10 mnt',month:'Jul',dv:'2026-07-18',dim:true,pills:['Libur'],s:[
     {tp:'p',title:'Pauli 10 menit — anchor',sub:''},
     {tp:'rest',title:'Istirahat penuh.',sub:''}]},
-  {w:'w4',name:'Minggu',dayN:'19',month:'Jul',dv:'2026-07-19',dim:true,pills:['Libur'],s:[
+  {w:'w4',name:'Minggu',dayN:'19',pauliDur:'10 mnt',month:'Jul',dv:'2026-07-19',dim:true,pills:['Libur'],s:[
     {tp:'p',title:'Pauli 10 menit — anchor',sub:''},
     {tp:'rest',title:'Istirahat penuh.',sub:''}]},
-  {w:'w4',name:'Senin',dayN:'20',month:'Jul',dv:'2026-07-20',dim:false,pills:['Simulasi 3'],s:[
+  {w:'w4',name:'Senin',dayN:'20',pauliDur:'25 mnt',month:'Jul',dv:'2026-07-20',dim:false,pills:['Simulasi 3'],s:[
     {tp:'p',title:'Pauli 25 menit',sub:''},
     {tp:'sim',title:'Simulasi 3 — penuh (semua tipe sekaligus)',sub:'Verbal + numerik + logika + figural · Timed ketat, tidak berhenti di tengah · Setelah selesai: buat daftar final tipe soal yang paling lemah — ini yang jadi prioritas Minggu 5 & 6'},
     {tp:'r',title:'Evaluasi — catat perkembangan Simulasi 1→3',sub:'Ini tolok ukur kesiapanmu sebelum daftar'}]},
-  {w:'w4',name:'Selasa',dayN:'21',month:'Jul',dv:'2026-07-21',dim:false,pills:['Remedial'],s:[
+  {w:'w4',name:'Selasa',dayN:'21',pauliDur:'20 mnt',month:'Jul',dv:'2026-07-21',dim:false,pills:['Remedial'],s:[
     {tp:'p',title:'Pauli 20 menit',sub:''},
     {tp:'r',title:'Remedial akhir — satu materi yang paling belum mantap',sub:'Kerjakan soal, bukan baca ulang buku'}]},
-  {w:'w4',name:'Rabu',dayN:'22',month:'Jul',dv:'2026-07-22',dim:false,pills:['Review'],s:[
+  {w:'w4',name:'Rabu',dayN:'22',pauliDur:'15 mnt',month:'Jul',dv:'2026-07-22',dim:false,pills:['Review'],s:[
     {tp:'p',title:'Pauli 15 menit',sub:''},
     {tp:'r',title:'Review ringan — baca catatan soal yang sering salah',sub:'Sesi menenangkan diri, bukan belajar baru'}]},
-  {w:'w4',name:'Kam–Minggu',dayN:'23',month:'Jul',dv:'2026-07-23',dim:true,pills:['Istirahat'],s:[
+  {w:'w4',name:'Kam–Minggu',dayN:'23',pauliDur:'10 mnt',month:'Jul',dv:'2026-07-23',dim:true,pills:['Istirahat'],s:[
     {tp:'p',title:'Pauli 10 menit saja — tidak lebih',sub:''},
     {tp:'rest',title:'Istirahat aktif — tidak ada soal',sub:'Tidur cukup, makan baik, gym tetap jalan. Kecemasan sebelum daftar adalah normal.'}]},
-  {w:'w4',name:'Senin',dayN:'27',month:'Jul',dv:'2026-07-27',dim:false,pills:['Dokumen'],s:[
+  {w:'w4',name:'Senin',dayN:'27',pauliDur:'10 mnt',month:'Jul',dv:'2026-07-27',dim:false,pills:['Dokumen'],s:[
     {tp:'p',title:'Pauli 10 menit',sub:''},
     {tp:'r',title:'Cek semua dokumen pendaftaran',sub:'Pastikan tidak ada yang kurang sebelum 30 Juli'}]},
-  {w:'w4',name:'Selasa',dayN:'28',month:'Jul',dv:'2026-07-28',dim:true,pills:['Istirahat'],s:[
+  {w:'w4',name:'Selasa',dayN:'28',pauliDur:'10 mnt',month:'Jul',dv:'2026-07-28',dim:true,pills:['Istirahat'],s:[
     {tp:'p',title:'Pauli 10 menit',sub:''},
     {tp:'rest',title:'Tidak ada belajar sama sekali.',sub:'Percayai proses yang sudah kamu jalani'}]},
-  {w:'w4',name:'Rabu',dayN:'29',month:'Jul',dv:'2026-07-29',dim:true,pills:['Istirahat'],s:[
+  {w:'w4',name:'Rabu',dayN:'29',pauliDur:'10 mnt',month:'Jul',dv:'2026-07-29',dim:true,pills:['Istirahat'],s:[
     {tp:'p',title:'Pauli 10 menit',sub:''},
     {tp:'rest',title:'Tidak ada belajar sama sekali.',sub:'Istirahat cukup sebelum hari daftar'}]},
-  {w:'w4',name:'Kamis',dayN:'30',month:'Jul',dv:'2026-07-30',dim:false,pills:['Daftar!'],s:[
+  {w:'w4',name:'Kamis',dayN:'30',pauliDur:'0 mnt',month:'Jul',dv:'2026-07-30',dim:false,pills:['Daftar!'],s:[
     {tp:'sim',title:'Hari pendaftaran PPTI BCA',sub:'Daftarkan diri — semua persiapan sudah dilakukan. Semangat, Raihan.'}]},
 
   // MINGGU 5
-  {w:'w5',name:'Senin',dayN:'1',month:'Agt',dv:'2026-08-01',dim:false,pills:['Figural'],s:[
+  {w:'w5',name:'Senin',dayN:'1',month:'Agt',pauliDur:'25 mnt',dv:'2026-08-01',dim:false,pills:['Figural'],s:[
     {tp:'p',title:'Pauli 25 menit',sub:''},
     {tp:'r',title:'Pola gambar — 10 soal baru (paparan ke-2)',sub:'Pakai TryOut.id · timed ketat'},
     {tp:'r',title:'Kubus 3D — 8 soal baru (paparan ke-2)',sub:'Visualisasikan dulu sebelum menjawab'}]},
-  {w:'w5',name:'Selasa',dayN:'2',month:'Agt',dv:'2026-08-02',dim:false,pills:['Figural'],s:[
+  {w:'w5',name:'Selasa',dayN:'2',pauliDur:'25 mnt',month:'Agt',dv:'2026-08-02',dim:false,pills:['Figural'],s:[
     {tp:'p',title:'Pauli 25 menit',sub:''},
     {tp:'r',title:'Pencerminan & jaring-jaring — 10 soal baru (paparan ke-2)',sub:''},
     {tp:'r',title:'Gambar spasial & penggabungan — 8 soal baru (paparan ke-2)',sub:''}]},
-  {w:'w5',name:'Rabu',dayN:'3',month:'Agt',dv:'2026-08-03',dim:false,pills:['Numerik'],s:[
+  {w:'w5',name:'Rabu',dayN:'3',pauliDur:'25 mnt',month:'Agt',dv:'2026-08-03',dim:false,pills:['Numerik'],s:[
     {tp:'p',title:'Pauli 25 menit',sub:''},
     {tp:'r',title:'Cerita matematika & berpola — 10 soal baru (paparan ke-2)',sub:''},
     {tp:'r',title:'Aritmatika — 10 soal baru timed (paparan ke-3)',sub:'Max 20 detik per soal'}]},
-  {w:'w5',name:'Kamis',dayN:'4',month:'Agt',dv:'2026-08-04',dim:false,pills:['Verbal'],s:[
+  {w:'w5',name:'Kamis',dayN:'4',pauliDur:'25 mnt',month:'Agt',dv:'2026-08-04',dim:false,pills:['Verbal'],s:[
     {tp:'p',title:'Pauli 25 menit',sub:''},
     {tp:'r',title:'Verbal — 15 soal baru: sinonim, antonim, analogi (paparan ke-2)',sub:''},
     {tp:'r',title:'Diagram Venn & ketelitian — 10 soal baru (paparan ke-2)',sub:''},
     {tp:'t',title:'DAT & DAM — latihan gambar ulang (paparan ke-2)',sub:'Gambar 2x pohon, 2x orang'}]},
-  {w:'w5',name:'Jumat',dayN:'5',month:'Agt',dv:'2026-08-05',dim:false,pills:['Simulasi 4'],s:[
+  {w:'w5',name:'Jumat',dayN:'5',pauliDur:'30 mnt',month:'Agt',dv:'2026-08-05',dim:false,pills:['Simulasi 4'],s:[
     {tp:'p',title:'Pauli 30 menit',sub:''},
     {tp:'sim',title:'Simulasi 4 — penuh semua tipe',sub:'Verbal + numerik + logika + figural · Timed ketat'},
     {tp:'r',title:'Evaluasi — bandingkan dengan Simulasi 3',sub:'Catat peningkatan dan materi yang masih lemah'}]},
-  {w:'w5',name:'Sabtu',dayN:'6',month:'Agt',dv:'2026-08-06',dim:true,pills:['Libur'],s:[
+  {w:'w5',name:'Sabtu',dayN:'6',pauliDur:'10 mnt',month:'Agt',dv:'2026-08-06',dim:true,pills:['Libur'],s:[
     {tp:'p',title:'Pauli 10 menit — anchor',sub:''},
     {tp:'rest',title:'Istirahat penuh.',sub:''}]},
-  {w:'w5',name:'Minggu',dayN:'7',month:'Agt',dv:'2026-08-07',dim:true,pills:['Libur'],s:[
+  {w:'w5',name:'Minggu',dayN:'7',pauliDur:'10 mnt',month:'Agt',dv:'2026-08-07',dim:true,pills:['Libur'],s:[
     {tp:'p',title:'Pauli 10 menit — anchor',sub:''},
     {tp:'rest',title:'Istirahat penuh.',sub:''}]},
 
   // MINGGU 6
-  {w:'w6',name:'Senin',dayN:'8',month:'Agt',dv:'2026-08-08',dim:false,pills:['Figural','Logika'],s:[
+  {w:'w6',name:'Senin',dayN:'8',pauliDur:'30 mnt',month:'Agt',dv:'2026-08-08',dim:false,pills:['Figural','Logika'],s:[
     {tp:'p',title:'Pauli 30 menit',sub:''},
     {tp:'r',title:'Pola gambar + kubus 3D — 12 soal campuran timed (paparan ke-3)',sub:'Max 30 detik per soal'},
     {tp:'r',title:'Logika campuran timed (paparan ke-3 ulang)',sub:'6 formal + 6 analitik · max 1 menit per soal'}]},
-  {w:'w6',name:'Selasa',dayN:'9',month:'Agt',dv:'2026-08-09',dim:false,pills:['Figural'],s:[
+  {w:'w6',name:'Selasa',dayN:'9',pauliDur:'30 mnt',month:'Agt',dv:'2026-08-09',dim:false,pills:['Figural'],s:[
     {tp:'p',title:'Pauli 30 menit',sub:''},
     {tp:'r',title:'Pencerminan, jaring-jaring, spasial, penggabungan — campuran timed (paparan ke-3)',sub:'15 soal, max 30 detik per soal'}]},
-  {w:'w6',name:'Rabu',dayN:'10',month:'Agt',dv:'2026-08-10',dim:false,pills:['Numerik','Verbal'],s:[
+  {w:'w6',name:'Rabu',dayN:'10',pauliDur:'30 mnt',month:'Agt',dv:'2026-08-10',dim:false,pills:['Numerik','Verbal'],s:[
     {tp:'p',title:'Pauli 30 menit',sub:''},
     {tp:'r',title:'Cerita matematika & berpola — 10 soal timed (paparan ke-3)',sub:''},
     {tp:'r',title:'Verbal campuran — 15 soal timed (paparan ke-3)',sub:'Sinonim + antonim + analogi'}]},
-  {w:'w6',name:'Kamis',dayN:'11',month:'Agt',dv:'2026-08-11',dim:false,pills:['Simulasi 5'],s:[
+  {w:'w6',name:'Kamis',dayN:'11',pauliDur:'35 mnt',month:'Agt',dv:'2026-08-11',dim:false,pills:['Simulasi 5'],s:[
     {tp:'p',title:'Pauli 35 menit',sub:''},
     {tp:'sim',title:'Simulasi 5 — penuh final',sub:'Semua tipe · kondisi semirip mungkin dengan tes sesungguhnya'},
     {tp:'r',title:'Evaluasi menyeluruh — Simulasi 1 sampai 5',sub:'Ini gambaran kesiapan final sebelum tes BCA'}]},
-  {w:'w6',name:'Jumat',dayN:'12',month:'Agt',dv:'2026-08-12',dim:false,pills:['Maintenance'],s:[
+  {w:'w6',name:'Jumat',dayN:'12',pauliDur:'20 mnt',month:'Agt',dv:'2026-08-12',dim:false,pills:['Maintenance'],s:[
     {tp:'p',title:'Pauli 20 menit',sub:''},
     {tp:'r',title:'Review ringan — catatan soal yang masih sering salah',sub:'Tidak ada soal baru. Ini sesi terakhir belajar intensif.'},
     {tp:'rest',title:'Mulai sekarang: maintenance harian sambil tunggu panggilan',sub:'Pauli 10–15 menit per hari saja sampai dapat jadwal tes dari BCA'}]}
@@ -397,6 +398,7 @@ const WK_META={
 
 const SD={p:'sd-p',k:'sd-k',s:'sd-s',r:'sd-r',sim:'sd-sim',rest:'sd-rest',t:'sd-t'};
 const ST={p:'Pauli',k:'Konsep',s:'Soal',r:'Review / Ulang',sim:'Simulasi',rest:'Istirahat',t:'Teknik'};
+const DUR={k:'55 mnt',s:'30 mnt',r:'20 mnt',sim:'90 mnt',t:'30 mnt',rest:'',p:''};
 const PILL_CLS={'Buffer':'mp-blue','Remedial':'mp-blue','Daftar!':'mp-red','Simulasi 1':'mp-green','Simulasi 2':'mp-green','Simulasi 3':'mp-green','Simulasi 4':'mp-green','Simulasi 5':'mp-green'};
 
 function buildCard(day,todayStr){
@@ -426,7 +428,9 @@ function buildCard(day,todayStr){
   day.s.forEach(s=>{
     const el=document.createElement('div');
     el.className='sess';
-    el.innerHTML=`<div class="sess-dot ${SD[s.tp]||'sd-k'}"></div><div class="sess-inner"><div class="sess-type">${ST[s.tp]||'Sesi'}</div><div class="sess-title">${s.title}</div>${s.sub?`<div class="sess-sub">${s.sub}</div>`:''}</div>`;
+    const dur = s.tp==='p' ? (day.pauliDur||'10 mnt') : (DUR[s.tp]||'');
+    const durBadge = dur ? `<div class="sess-dur">${dur}</div>` : '';
+    el.innerHTML=`<div class="sess-dot ${SD[s.tp]||'sd-k'}"></div><div class="sess-inner"><div class="sess-type">${ST[s.tp]||'Sesi'}</div><div class="sess-title">${s.title}</div>${s.sub?`<div class="sess-sub">${s.sub}</div>`:''}</div>${durBadge}`;
     db.appendChild(el);
   });
   if(!day.dim){
